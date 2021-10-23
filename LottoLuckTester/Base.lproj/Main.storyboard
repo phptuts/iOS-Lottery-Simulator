@@ -135,38 +135,68 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jackpots: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va6-ZS-MHw">
-                                <rect key="frame" x="30" y="518" width="354" height="39"/>
+                                <rect key="frame" x="30" y="508" width="354" height="39"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLt-CA-AmG">
-                                <rect key="frame" x="30" y="577" width="354" height="40"/>
+                                <rect key="frame" x="30" y="557" width="354" height="40"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-3f-1mk">
-                                <rect key="frame" x="30" y="637" width="354" height="39"/>
+                                <rect key="frame" x="30" y="607" width="354" height="39"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-2H-lPh">
+                                <rect key="frame" x="30" y="666" width="354" height="85.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-vH-JwO">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="85.5"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Share">
+                                                    <attributes>
+                                                        <font key="NSFont" size="25" name="PermanentMarker-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-9x-rdV">
+                                        <rect key="frame" x="182" y="0.0" width="172" height="85.5"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Winning Numbers">
+                                            <fontDescription key="titleFontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wKO-mE-ORA"/>
                         <color key="backgroundColor" red="0.88028687522800275" green="0.54831792372945221" blue="0.15752672945753421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="aRB-2H-lPh" firstAttribute="top" secondItem="DSF-3f-1mk" secondAttribute="bottom" constant="20" id="38l-kQ-3AM"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="8KK-jH-osz" secondAttribute="trailing" constant="30" id="55k-Oo-Ubr"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="aRB-2H-lPh" secondAttribute="trailing" constant="30" id="7hs-ez-Uff"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="F4n-e7-602" secondAttribute="trailing" constant="30" id="809-pW-YO5"/>
                             <constraint firstItem="NSg-5R-AL8" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="8EE-Eh-qaX"/>
                             <constraint firstItem="8KK-jH-osz" firstAttribute="top" secondItem="qBd-GQ-jBa" secondAttribute="bottom" constant="10" id="8Kc-pz-mv9"/>
                             <constraint firstItem="SST-vC-kHR" firstAttribute="top" secondItem="NSg-5R-AL8" secondAttribute="bottom" constant="10" id="AlO-4d-dE5"/>
-                            <constraint firstItem="GLt-CA-AmG" firstAttribute="top" secondItem="va6-ZS-MHw" secondAttribute="bottom" constant="20" id="DPC-Cx-fBf"/>
+                            <constraint firstItem="GLt-CA-AmG" firstAttribute="top" secondItem="va6-ZS-MHw" secondAttribute="bottom" constant="10" id="DPC-Cx-fBf"/>
                             <constraint firstItem="2Qp-Cu-MdU" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="Ecp-Ou-I9e"/>
                             <constraint firstItem="F4n-e7-602" firstAttribute="top" secondItem="b4v-Pj-ZD5" secondAttribute="bottom" constant="20" id="Gem-Mq-99e"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="GLt-CA-AmG" secondAttribute="trailing" constant="30" id="Grm-CC-v39"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="MYl-Mc-ocw" secondAttribute="trailing" constant="30" id="Hz9-Cg-BaP"/>
-                            <constraint firstItem="DSF-3f-1mk" firstAttribute="top" secondItem="GLt-CA-AmG" secondAttribute="bottom" constant="20" id="Iyh-jd-BbV"/>
+                            <constraint firstItem="DSF-3f-1mk" firstAttribute="top" secondItem="GLt-CA-AmG" secondAttribute="bottom" constant="10" id="Iyh-jd-BbV"/>
                             <constraint firstItem="DSF-3f-1mk" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="LOa-bc-Xpo"/>
                             <constraint firstItem="b4v-Pj-ZD5" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="M1G-9P-vE9"/>
                             <constraint firstItem="b4v-Pj-ZD5" firstAttribute="top" secondItem="dNd-zU-0MY" secondAttribute="bottom" constant="15" id="UIf-cQ-cUP"/>
@@ -178,8 +208,9 @@
                             <constraint firstItem="qBd-GQ-jBa" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="gT0-8V-0ux"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="qBd-GQ-jBa" secondAttribute="trailing" constant="30" id="hwN-eE-Xwc"/>
                             <constraint firstItem="dNd-zU-0MY" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="i3Y-kv-3AY"/>
+                            <constraint firstItem="aRB-2H-lPh" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="jeo-d2-Mj5"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="NSg-5R-AL8" secondAttribute="trailing" constant="30" id="kkM-ek-5g2"/>
-                            <constraint firstItem="va6-ZS-MHw" firstAttribute="top" secondItem="MYl-Mc-ocw" secondAttribute="bottom" constant="20" id="nbV-CC-Bf6"/>
+                            <constraint firstItem="va6-ZS-MHw" firstAttribute="top" secondItem="MYl-Mc-ocw" secondAttribute="bottom" constant="10" id="nbV-CC-Bf6"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="2Qp-Cu-MdU" secondAttribute="trailing" constant="30" id="oOJ-BB-m5C"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="DSF-3f-1mk" secondAttribute="trailing" constant="30" id="pnj-31-90d"/>
                             <constraint firstItem="MYl-Mc-ocw" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="rwK-Wt-1Ph"/>
@@ -243,6 +274,12 @@
         </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
