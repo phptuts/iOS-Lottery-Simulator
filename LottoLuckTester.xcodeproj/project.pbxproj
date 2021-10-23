@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		475AFA230D7CABE91938CA99 /* Pods_LottoLuckTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11E03B07B997F7385BB4E5F /* Pods_LottoLuckTester.framework */; };
+		8F7BCC5B2712B6EE00B6CF19 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8FA46A192712B41D00B0CF5F /* fonts */; };
+		8F7BCC5D2714CECC00B6CF19 /* TextFieldNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BCC5C2714CECC00B6CF19 /* TextFieldNumberValidator.swift */; };
+		8F7BCC5F271BAB1300B6CF19 /* LotteryCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BCC5E271BAB1300B6CF19 /* LotteryCalculator.swift */; };
+		8FA46A16271115D400B0CF5F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA46A15271115D400B0CF5F /* MainViewController.swift */; };
 		8FBBCE5A270FAE7D007F3DEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBCE59270FAE7D007F3DEA /* AppDelegate.swift */; };
 		8FBBCE5C270FAE7D007F3DEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBCE5B270FAE7D007F3DEA /* SceneDelegate.swift */; };
-		8FBBCE5E270FAE7D007F3DEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBCE5D270FAE7D007F3DEA /* ViewController.swift */; };
 		8FBBCE61270FAE7D007F3DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBCE5F270FAE7D007F3DEA /* Main.storyboard */; };
 		8FBBCE64270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBCE62270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld */; };
 		8FBBCE66270FAE7F007F3DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBCE65270FAE7F007F3DEA /* Assets.xcassets */; };
@@ -17,15 +21,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C22825101362B9A6D90C1B8 /* Pods-LottoLuckTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoLuckTester.release.xcconfig"; path = "Target Support Files/Pods-LottoLuckTester/Pods-LottoLuckTester.release.xcconfig"; sourceTree = "<group>"; };
+		8F7BCC5C2714CECC00B6CF19 /* TextFieldNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldNumberValidator.swift; sourceTree = "<group>"; };
+		8F7BCC5E271BAB1300B6CF19 /* LotteryCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCalculator.swift; sourceTree = "<group>"; };
+		8FA46A15271115D400B0CF5F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8FA46A192712B41D00B0CF5F /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		8FBBCE56270FAE7D007F3DEA /* LottoLuckTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottoLuckTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBBCE59270FAE7D007F3DEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FBBCE5B270FAE7D007F3DEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8FBBCE5D270FAE7D007F3DEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8FBBCE60270FAE7D007F3DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FBBCE63270FAE7D007F3DEA /* LottoLuckTester.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LottoLuckTester.xcdatamodel; sourceTree = "<group>"; };
 		8FBBCE65270FAE7F007F3DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FBBCE68270FAE7F007F3DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FBBCE6A270FAE7F007F3DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C11E03B07B997F7385BB4E5F /* Pods_LottoLuckTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottoLuckTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5728BE26B08FA8A6D3894F /* Pods-LottoLuckTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoLuckTester.debug.xcconfig"; path = "Target Support Files/Pods-LottoLuckTester/Pods-LottoLuckTester.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475AFA230D7CABE91938CA99 /* Pods_LottoLuckTester.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7103A899297C2D283B2BF578 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C11E03B07B997F7385BB4E5F /* Pods_LottoLuckTester.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FBBCE4D270FAE7D007F3DEA = {
 			isa = PBXGroup;
 			children = (
 				8FBBCE58270FAE7D007F3DEA /* LottoLuckTester */,
 				8FBBCE57270FAE7D007F3DEA /* Products */,
+				9404B82A1400BE99BB0D425E /* Pods */,
+				7103A899297C2D283B2BF578 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +79,28 @@
 		8FBBCE58270FAE7D007F3DEA /* LottoLuckTester */ = {
 			isa = PBXGroup;
 			children = (
+				8FA46A15271115D400B0CF5F /* MainViewController.swift */,
 				8FBBCE59270FAE7D007F3DEA /* AppDelegate.swift */,
 				8FBBCE5B270FAE7D007F3DEA /* SceneDelegate.swift */,
-				8FBBCE5D270FAE7D007F3DEA /* ViewController.swift */,
 				8FBBCE5F270FAE7D007F3DEA /* Main.storyboard */,
 				8FBBCE65270FAE7F007F3DEA /* Assets.xcassets */,
 				8FBBCE67270FAE7F007F3DEA /* LaunchScreen.storyboard */,
 				8FBBCE6A270FAE7F007F3DEA /* Info.plist */,
 				8FBBCE62270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld */,
+				8F7BCC5C2714CECC00B6CF19 /* TextFieldNumberValidator.swift */,
+				8FA46A192712B41D00B0CF5F /* fonts */,
+				8F7BCC5E271BAB1300B6CF19 /* LotteryCalculator.swift */,
 			);
 			path = LottoLuckTester;
+			sourceTree = "<group>";
+		};
+		9404B82A1400BE99BB0D425E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE5728BE26B08FA8A6D3894F /* Pods-LottoLuckTester.debug.xcconfig */,
+				0C22825101362B9A6D90C1B8 /* Pods-LottoLuckTester.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +110,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FBBCE6D270FAE7F007F3DEA /* Build configuration list for PBXNativeTarget "LottoLuckTester" */;
 			buildPhases = (
+				E0EEB7BF6A2DF308040F6E59 /* [CP] Check Pods Manifest.lock */,
 				8FBBCE52270FAE7D007F3DEA /* Sources */,
 				8FBBCE53270FAE7D007F3DEA /* Frameworks */,
 				8FBBCE54270FAE7D007F3DEA /* Resources */,
@@ -128,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7BCC5B2712B6EE00B6CF19 /* fonts in Resources */,
 				8FBBCE69270FAE7F007F3DEA /* LaunchScreen.storyboard in Resources */,
 				8FBBCE66270FAE7F007F3DEA /* Assets.xcassets in Resources */,
 				8FBBCE61270FAE7D007F3DEA /* Main.storyboard in Resources */,
@@ -136,15 +171,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E0EEB7BF6A2DF308040F6E59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LottoLuckTester-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FBBCE52270FAE7D007F3DEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8FBBCE64270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld in Sources */,
-				8FBBCE5E270FAE7D007F3DEA /* ViewController.swift in Sources */,
 				8FBBCE5A270FAE7D007F3DEA /* AppDelegate.swift in Sources */,
+				8F7BCC5D2714CECC00B6CF19 /* TextFieldNumberValidator.swift in Sources */,
 				8FBBCE5C270FAE7D007F3DEA /* SceneDelegate.swift in Sources */,
+				8FA46A16271115D400B0CF5F /* MainViewController.swift in Sources */,
+				8F7BCC5F271BAB1300B6CF19 /* LotteryCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +350,7 @@
 		};
 		8FBBCE6E270FAE7F007F3DEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE5728BE26B08FA8A6D3894F /* Pods-LottoLuckTester.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +364,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +380,7 @@
 		};
 		8FBBCE6F270FAE7F007F3DEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C22825101362B9A6D90C1B8 /* Pods-LottoLuckTester.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -329,6 +394,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

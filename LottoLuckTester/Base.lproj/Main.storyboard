@@ -1,24 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="886-Bj-Dxf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PermanentMarker-Regular.ttf">
+            <string>PermanentMarker-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Press your lottery luck!-->
+        <scene sceneID="vcL-0e-i6k">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="7t8-qT-2a9" customClass="MainViewController" customModule="LottoLuckTester" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o6s-sz-9Uc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucky Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-5R-AL8">
+                                <rect key="frame" x="30" y="103" width="354" height="29"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tickets Per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBd-GQ-jBa">
+                                <rect key="frame" x="30" y="197" width="354" height="29"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-jH-osz">
+                                <rect key="frame" x="30" y="236" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-Pj-ZD5">
+                                <rect key="frame" x="28" y="324" width="358" height="31"/>
+                                <connections>
+                                    <action selector="sliderYearChanged:" destination="7t8-qT-2a9" eventType="valueChanged" id="u09-R3-zED"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Million Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-zU-0MY">
+                                <rect key="frame" x="30" y="280" width="354" height="29"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Qp-Cu-MdU">
+                                <rect key="frame" x="30" y="142" width="354" height="35"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SST-vC-kHR">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ctw-Jc-hh3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THj-CO-ra5">
+                                        <rect key="frame" x="52" y="0.0" width="42" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="bd5-4Z-hxk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O64-ce-Siv">
+                                        <rect key="frame" x="104" y="0.0" width="42" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="CrB-tK-Xav"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="16" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EYI-Ca-gd0">
+                                        <rect key="frame" x="156" y="0.0" width="42" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="iqh-ex-p56"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="17" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-ij-gBi">
+                                        <rect key="frame" x="208" y="0.0" width="42" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="er3-6h-Fbd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JcN-8R-Lrr">
+                                        <rect key="frame" x="260" y="0.0" width="42" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="jVH-gj-Zom"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-Yd-7ko">
+                                        <rect key="frame" x="312" y="0.0" width="42" height="35"/>
+                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system"/>
+                                        <connections>
+                                            <action selector="onRefreshBtn:" destination="7t8-qT-2a9" eventType="touchUpInside" id="48K-q5-G8t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4n-e7-602">
+                                <rect key="frame" x="30" y="374" width="354" height="64"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="36"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playLotto:" destination="7t8-qT-2a9" eventType="touchUpInside" id="Scs-Rl-om1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYl-Mc-ocw">
+                                <rect key="frame" x="30" y="458" width="354" height="40"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jackpots: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va6-ZS-MHw">
+                                <rect key="frame" x="30" y="518" width="354" height="39"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLt-CA-AmG">
+                                <rect key="frame" x="30" y="577" width="354" height="40"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-3f-1mk">
+                                <rect key="frame" x="30" y="637" width="354" height="39"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wKO-mE-ORA"/>
+                        <color key="backgroundColor" red="0.88028687522800275" green="0.54831792372945221" blue="0.15752672945753421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="8KK-jH-osz" secondAttribute="trailing" constant="30" id="55k-Oo-Ubr"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="F4n-e7-602" secondAttribute="trailing" constant="30" id="809-pW-YO5"/>
+                            <constraint firstItem="NSg-5R-AL8" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="8EE-Eh-qaX"/>
+                            <constraint firstItem="8KK-jH-osz" firstAttribute="top" secondItem="qBd-GQ-jBa" secondAttribute="bottom" constant="10" id="8Kc-pz-mv9"/>
+                            <constraint firstItem="SST-vC-kHR" firstAttribute="top" secondItem="NSg-5R-AL8" secondAttribute="bottom" constant="10" id="AlO-4d-dE5"/>
+                            <constraint firstItem="GLt-CA-AmG" firstAttribute="top" secondItem="va6-ZS-MHw" secondAttribute="bottom" constant="20" id="DPC-Cx-fBf"/>
+                            <constraint firstItem="2Qp-Cu-MdU" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="Ecp-Ou-I9e"/>
+                            <constraint firstItem="F4n-e7-602" firstAttribute="top" secondItem="b4v-Pj-ZD5" secondAttribute="bottom" constant="20" id="Gem-Mq-99e"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="GLt-CA-AmG" secondAttribute="trailing" constant="30" id="Grm-CC-v39"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="MYl-Mc-ocw" secondAttribute="trailing" constant="30" id="Hz9-Cg-BaP"/>
+                            <constraint firstItem="DSF-3f-1mk" firstAttribute="top" secondItem="GLt-CA-AmG" secondAttribute="bottom" constant="20" id="Iyh-jd-BbV"/>
+                            <constraint firstItem="DSF-3f-1mk" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="LOa-bc-Xpo"/>
+                            <constraint firstItem="b4v-Pj-ZD5" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="M1G-9P-vE9"/>
+                            <constraint firstItem="b4v-Pj-ZD5" firstAttribute="top" secondItem="dNd-zU-0MY" secondAttribute="bottom" constant="15" id="UIf-cQ-cUP"/>
+                            <constraint firstItem="MYl-Mc-ocw" firstAttribute="top" secondItem="F4n-e7-602" secondAttribute="bottom" constant="20" id="Y34-Px-ATw"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="b4v-Pj-ZD5" secondAttribute="trailing" constant="30" id="Zk9-w9-CVS"/>
+                            <constraint firstItem="dNd-zU-0MY" firstAttribute="top" secondItem="8KK-jH-osz" secondAttribute="bottom" constant="10" id="aYR-SF-CJr"/>
+                            <constraint firstItem="8KK-jH-osz" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="ef3-uO-cqq"/>
+                            <constraint firstItem="NSg-5R-AL8" firstAttribute="top" secondItem="wKO-mE-ORA" secondAttribute="top" constant="15" id="gKB-p5-piy"/>
+                            <constraint firstItem="qBd-GQ-jBa" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="gT0-8V-0ux"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="qBd-GQ-jBa" secondAttribute="trailing" constant="30" id="hwN-eE-Xwc"/>
+                            <constraint firstItem="dNd-zU-0MY" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="i3Y-kv-3AY"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="NSg-5R-AL8" secondAttribute="trailing" constant="30" id="kkM-ek-5g2"/>
+                            <constraint firstItem="va6-ZS-MHw" firstAttribute="top" secondItem="MYl-Mc-ocw" secondAttribute="bottom" constant="20" id="nbV-CC-Bf6"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="2Qp-Cu-MdU" secondAttribute="trailing" constant="30" id="oOJ-BB-m5C"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="DSF-3f-1mk" secondAttribute="trailing" constant="30" id="pnj-31-90d"/>
+                            <constraint firstItem="MYl-Mc-ocw" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="rwK-Wt-1Ph"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="dNd-zU-0MY" secondAttribute="trailing" constant="30" id="thW-80-3lw"/>
+                            <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="va6-ZS-MHw" secondAttribute="trailing" constant="30" id="tpE-NQ-Rml"/>
+                            <constraint firstItem="qBd-GQ-jBa" firstAttribute="top" secondItem="2Qp-Cu-MdU" secondAttribute="bottom" constant="20" id="uJt-E4-w17"/>
+                            <constraint firstItem="GLt-CA-AmG" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="uTd-In-tpt"/>
+                            <constraint firstItem="va6-ZS-MHw" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="vcs-nI-ogd"/>
+                            <constraint firstItem="F4n-e7-602" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="vmW-Hr-MUY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Press your lottery luck!" id="5GA-OB-zdl"/>
+                    <connections>
+                        <outlet property="lottoNum1" destination="SST-vC-kHR" id="lFt-dY-3nT"/>
+                        <outlet property="lottoNum2" destination="THj-CO-ra5" id="IRL-0n-13D"/>
+                        <outlet property="lottoNum3" destination="O64-ce-Siv" id="2j3-te-lUA"/>
+                        <outlet property="lottoNum4" destination="EYI-Ca-gd0" id="8QA-Vt-wFh"/>
+                        <outlet property="lottoNum5" destination="8f7-ij-gBi" id="aGB-mL-as1"/>
+                        <outlet property="lottoNum6" destination="JcN-8R-Lrr" id="6eC-BN-JUm"/>
+                        <outlet property="playButton" destination="F4n-e7-602" id="lxP-XB-65C"/>
+                        <outlet property="refreshButton" destination="qpr-Yd-7ko" id="JkO-VD-vuX"/>
+                        <outlet property="spentLabel" destination="GLt-CA-AmG" id="uH0-AB-Men"/>
+                        <outlet property="ticketPerTextField" destination="8KK-jH-osz" id="UEz-jZ-dtF"/>
+                        <outlet property="totalJackpotLabel" destination="va6-ZS-MHw" id="Zyi-uF-kOk"/>
+                        <outlet property="totalYearsLabel" destination="MYl-Mc-ocw" id="FNX-vF-Ofj"/>
+                        <outlet property="winningLabel" destination="DSF-3f-1mk" id="xNU-Sk-y2v"/>
+                        <outlet property="yearLabel" destination="dNd-zU-0MY" id="XJw-VP-Li8"/>
+                        <outlet property="yearSlider" destination="b4v-Pj-ZD5" id="evw-8Z-xY5"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adm-0F-Xey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="647.82608695652175" y="49.553571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9sN-mQ-gKG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="886-Bj-Dxf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Qw-AO-k4x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7t8-qT-2a9" kind="relationship" relationship="rootViewController" id="ltk-nt-T9S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQF-SF-vAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262.31884057971018" y="49.553571428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
