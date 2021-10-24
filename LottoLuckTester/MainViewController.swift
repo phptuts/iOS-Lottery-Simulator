@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var lottoNum1: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         lottoNum1?.delegate = lottoValidator
         lottoNum2?.delegate = lottoValidator
         lottoNum3?.delegate = lottoValidator
@@ -48,10 +49,15 @@ class MainViewController: UIViewController {
 
 
     @IBAction func sliderYearChanged(_ sender: Any) {
-        let years = round(yearSlider.value * 10) / 10
+        let years = Int(round(yearSlider.value) * 10000)
         
-        yearLabel.text = "\(years) Million Years"
-        yearSlider.setValue(years, animated: true)
+        if (years == 1_000_000) {
+            yearLabel.text = "1 Million Years"
+        } else {
+            yearLabel.text = "\(years.withCommas()) Years"
+        }
+        
+        yearSlider.setValue( round(yearSlider.value), animated: true)
     }
     
     @IBAction func onRefreshBtn(_ sender: Any) {
@@ -59,9 +65,11 @@ class MainViewController: UIViewController {
     }
     
     func randomNumbers() {
-        [lottoNum1, lottoNum2, lottoNum3, lottoNum4, lottoNum5, lottoNum6].forEach {
+        [lottoNum1, lottoNum2, lottoNum3, lottoNum4, lottoNum5].forEach {
             $0.text = String(Int.random(in: 1..<76))
         }
+        
+        lottoNum6.text = String(Int.random(in: 1..<26))
     }
 
     @IBAction func playLotto(_ sender: Any) {
@@ -95,8 +103,8 @@ class MainViewController: UIViewController {
         }
         
         
-        let years = Int((round(yearSlider.value * 10) / 10) * 1_000_000)
-            
+        let years = Int(round(yearSlider.value) * 10000)
+
         
         let lottoCal = LotteryCalculator(num1: num1, num2: num2, num3: num3, num4: num4, num5: num5, powerNumber: num6)
         
@@ -104,9 +112,9 @@ class MainViewController: UIViewController {
                
         var yearCount = 0;
         
-        let queue = DispatchQueue(label: "calculator-queue")
         self.running = true
         changeButton("Stop", color: .red)
+        let queue = DispatchQueue(label: "thread-safe-obj", attributes: .concurrent)
 
         queue.async {
             for i in 1...(ticketsPerYear * years) {
@@ -125,7 +133,13 @@ class MainViewController: UIViewController {
                     }
                 }
             }
+            DispatchQueue.main.async {
+                self.changeButton("Play Again!", color: UIColor.orange)
+                self.running = false
+            }
+            
         }
+        
     }
     
     func clearOutput() {
@@ -173,3 +187,15 @@ extension Int {
 }
 
 
+// https://stackoverflow.com/a/27079103
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
