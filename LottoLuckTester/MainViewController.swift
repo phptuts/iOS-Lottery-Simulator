@@ -64,6 +64,16 @@ class MainViewController: UIViewController {
         randomNumbers()
     }
     
+    @IBAction func shareView(_ sender: Any) {
+        let bounds = UIScreen.main.bounds
+        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
+        self.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let activityViewController = UIActivityViewController(activityItems: [img!], applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func randomNumbers() {
         [lottoNum1, lottoNum2, lottoNum3, lottoNum4, lottoNum5].forEach {
             $0.text = String(Int.random(in: 1..<76))
