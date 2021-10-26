@@ -123,8 +123,14 @@ class MainViewController: UIViewController {
                     break
                 }
                 if i % (ticketsPerYear * 50) == 0 {
-                    DispatchQueue.main.async {
-                        yearCount += 50
+                    // This needs to be sync because we need to stop the queue thread
+                    // So that we don't accidentially create another lotteryResult object that might get de allocated from the
+                    // memory and cause a crash.  The sync will stop the for loop from running and update the ui.
+                    
+                    // The problem is some variable is being accessed by different threads at the same time
+                    // by using sync we make it so that only one thread can access the variable at a time.
+                    DispatchQueue.main.sync {
+                            yearCount += 50
                         
                         self.totalYearsLabel.text = "Years: \(yearCount.withCommas())"
                         self.totalJackpotLabel.text = "Jackpots: \(lotteryResult.jackPots())"

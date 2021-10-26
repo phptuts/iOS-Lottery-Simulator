@@ -97,7 +97,6 @@ class LotteryResult {
     }
     
     public func addToWinning(_ dollar: String) {
-        print(dollar)
         var total = self.winnings[dollar] ?? 0
         total += 1
         self.winnings[dollar] = total
@@ -125,7 +124,6 @@ class LotteryResult {
                 print(key, "not working")
                 continue;
             }
-            print(addAmount, times)
             total += addAmount * times
         }
         
