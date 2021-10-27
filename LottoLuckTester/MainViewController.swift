@@ -65,13 +65,29 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func shareView(_ sender: Any) {
-        let bounds = UIScreen.main.bounds
-        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
-        self.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
+        
+        let years = Int(round(yearSlider.value) * 10000)
+        
+        let yearsText = years == 1_000_000 ? "1 Million Years" : "\(years.withCommas()) Years"
+        
+        let message = "I played lotto for \(yearsText)!!"
+        
+        // This code was copied from stackoverflow
+        // link: https://stackoverflow.com/a/44036814
+        let link = NSURL(string: "http://google.com/")
+        // Screenshot:
+        UIGraphicsBeginImageContextWithOptions(self.view.frame.size, true, 0.0)
+        self.view.drawHierarchy(in: self.view.frame, afterScreenUpdates: false)
         let img = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        let activityViewController = UIActivityViewController(activityItems: [img!], applicationActivities: nil)
-        self.present(activityViewController, animated: true, completion: nil)
+
+        //Set the link, message, image to share.
+        if let link = link, let img = img {
+            let objectsToShare = [message,link,img] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+            self.present(activityVC, animated: true, completion: nil)
+        }
     }
     
     func randomNumbers() {
