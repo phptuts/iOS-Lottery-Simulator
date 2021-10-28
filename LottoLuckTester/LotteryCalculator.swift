@@ -50,6 +50,7 @@ class LotteryCalculator {
             ballCount += 1;
         }
         
+        var addNumToWinningPick = true
                 
         if didMatchPowerBall && ballCount == 0 {
             result.addToWinning("2")
@@ -71,6 +72,11 @@ class LotteryCalculator {
             result.addToWinning("jackpot")
         } else {
             result.addToLoss()
+            addNumToWinningPick = false
+        }
+        
+        if (addNumToWinningPick) {
+            result.addWinningNumber(nums: WinningNumbers(powerBall: powerNumber, num1: lottoNum1, num2: lottoNum2, num3: lottoNum3, num4: lottoNum4, num5: lottoNum5, winnings: lottoNum5))
         }
         
         result.addToTimes()
@@ -79,10 +85,23 @@ class LotteryCalculator {
     }
 }
 
+struct WinningNumbers {
+    var powerBall: Int
+    var num1: Int
+    var num2: Int
+    var num3: Int
+    var num4: Int
+    var num5: Int
+    var winnings: Int
+}
+
+
+
 class LotteryResult {
     private var times = 0;
     private var losses = 0;
     private var winnings = ["2": 0, "4": 0, "10": 0, "200": 0, "500": 0, "10000": 0, "1000000": 0, "jackpot": 0]
+    private var picksThatWon: Array<WinningNumbers> = []
     
     public func addToLoss() {
         self.losses += 1;
@@ -101,6 +120,11 @@ class LotteryResult {
         total += 1
         self.winnings[dollar] = total
     }
+    
+    public func addWinningNumber(nums: WinningNumbers) {
+        self.picksThatWon.append(nums)
+    }
+    
     
     public func getLosses() -> Int {
         return self.losses
