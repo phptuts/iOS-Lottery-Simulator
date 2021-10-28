@@ -101,9 +101,11 @@ class MainViewController: UIViewController {
     @IBAction func playLotto(_ sender: Any) {
         if running == true {
             running = false
-            clearOutput()
             return
         }
+        
+        clearOutput()
+        
         guard let num1 = Int(lottoNum1.text ?? "1") else {
             return
         }
@@ -120,7 +122,7 @@ class MainViewController: UIViewController {
             return
         }
         
-        guard let num6 = Int(lottoNum6.text ?? "1") else {
+        guard let powerball = Int(lottoNum6.text ?? "1") else {
             return
         }
         
@@ -131,11 +133,8 @@ class MainViewController: UIViewController {
         
         let years = Int(round(yearSlider.value) * 10000)
 
-        
-        let lottoCal = LotteryCalculator(num1: num1, num2: num2, num3: num3, num4: num4, num5: num5, powerNumber: num6)
-        
-        var lotteryResult = LotteryResult()
-               
+        let pickedLottoNumbers = LottoNumbers(powerBall: powerball, nums: [num1, num2, num3, num4, num5])
+        var lottoSimulationResult = LotterySimulationResult(pickedLottoNumbers: pickedLottoNumbers)
         var yearCount = 0;
         
         self.running = true
@@ -144,7 +143,8 @@ class MainViewController: UIViewController {
 
         queue.async {
             for i in 1...(ticketsPerYear * years) {
-                lotteryResult = lottoCal.runLottery(result: lotteryResult)
+                let lotteryResult = runSimulation(pickedLottoNumbers)
+                lottoSimulationResult.addResult(lotteryResult)
                 if self.running == false {
                     break
                 }
@@ -159,15 +159,16 @@ class MainViewController: UIViewController {
                             yearCount += 50
                         
                         self.totalYearsLabel.text = "Years: \(yearCount.withCommas())"
-                        self.totalJackpotLabel.text = "Jackpots: \(lotteryResult.jackPots())"
-                        self.spentLabel.text = "Spent: \(lotteryResult.spent().toMoney())"
-                        self.winningLabel.text = "Winnings: \(lotteryResult.totalWinning().toMoney())"
+                        self.totalJackpotLabel.text = "Jackpots: \(lottoSimulationResult.jackPots())"
+                        self.spentLabel.text = "Spent: \(lottoSimulationResult.spent().toMoney())"
+                        self.winningLabel.text = "Winnings: \(lottoSimulationResult.won().toMoney())"
                     }
                 }
             }
             DispatchQueue.main.async {
                 self.changeButton("Play Again!", color: UIColor.orange)
                 self.running = false
+                print(lottoSimulationResult.winningLottoResult.count)
             }
             
         }
