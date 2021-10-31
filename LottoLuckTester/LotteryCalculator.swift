@@ -33,7 +33,7 @@ struct LotterySimulationResult {
     
     mutating func addResult(_ result: LottoResult) {
         self.timesPlayed += 1
-        if (result.dollars > 0) {
+        if (result.dollars >= 100) {
             self.winningLottoResult.append(result)
         }
         

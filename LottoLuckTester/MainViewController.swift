@@ -8,6 +8,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var lottoSimulationResult: LotterySimulationResult = LotterySimulationResult(pickedLottoNumbers: LottoNumbers(powerBall: 32, nums: [2,3,3,4,5]))
 
     // has to declared here bcause it will be destroy in memory, because it's in the stack
     let lottoValidator = TextFieldNumberValidator(min: 1, max: 70)
@@ -134,7 +136,7 @@ class MainViewController: UIViewController {
         let years = Int(round(yearSlider.value) * 10000)
 
         let pickedLottoNumbers = LottoNumbers(powerBall: powerball, nums: [num1, num2, num3, num4, num5])
-        var lottoSimulationResult = LotterySimulationResult(pickedLottoNumbers: pickedLottoNumbers)
+        self.lottoSimulationResult = LotterySimulationResult(pickedLottoNumbers: pickedLottoNumbers)
         var yearCount = 0;
         
         self.running = true
@@ -144,7 +146,7 @@ class MainViewController: UIViewController {
         queue.async {
             for i in 1...(ticketsPerYear * years) {
                 let lotteryResult = runSimulation(pickedLottoNumbers)
-                lottoSimulationResult.addResult(lotteryResult)
+                self.lottoSimulationResult.addResult(lotteryResult)
                 if self.running == false {
                     break
                 }
@@ -159,16 +161,16 @@ class MainViewController: UIViewController {
                             yearCount += 50
                         
                         self.totalYearsLabel.text = "Years: \(yearCount.withCommas())"
-                        self.totalJackpotLabel.text = "Jackpots: \(lottoSimulationResult.jackPots())"
-                        self.spentLabel.text = "Spent: \(lottoSimulationResult.spent().toMoney())"
-                        self.winningLabel.text = "Winnings: \(lottoSimulationResult.won().toMoney())"
+                        self.totalJackpotLabel.text = "Jackpots: \(self.lottoSimulationResult.jackPots())"
+                        self.spentLabel.text = "Spent: \(self.lottoSimulationResult.spent().toMoney())"
+                        self.winningLabel.text = "Winnings: \(self.lottoSimulationResult.won().toMoney())"
                     }
                 }
             }
             DispatchQueue.main.async {
                 self.changeButton("Play Again!", color: UIColor.orange)
                 self.running = false
-                print(lottoSimulationResult.winningLottoResult.count)
+                print(self.lottoSimulationResult.winningLottoResult.count)
             }
             
         }
@@ -192,6 +194,15 @@ class MainViewController: UIViewController {
         playButton.setAttributedTitle(myNormalAttributedTitle, for: .normal)
         playButton.layer.cornerRadius = 4
         playButton.layer.backgroundColor = color.cgColor
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        print("GOT HERE")
+        if segue.destination is LuckyNumbersTableViewController {
+            let vc = segue.destination as? LuckyNumbersTableViewController
+            vc?.result = self.lottoSimulationResult
+        }
     }
 }
 

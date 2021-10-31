@@ -173,6 +173,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Winning Numbers">
                                             <fontDescription key="titleFontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="HaY-ni-RMk" kind="show" id="q8P-9F-ZaT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -262,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="-262.31884057971018" y="49.553571428571423"/>
         </scene>
-        <!--Lucky Numbers Table View Controller-->
+        <!--Winning Numbers-->
         <scene sceneID="O3g-ol-jbM">
             <objects>
                 <tableViewController id="HaY-ni-RMk" customClass="LuckyNumbersTableViewController" customModule="LottoLuckTester" customModuleProvider="target" sceneMemberID="viewController">
@@ -271,12 +274,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zxF-FA-Fn3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="luckynumber" id="zxF-FA-Fn3">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zxF-FA-Fn3" id="UWt-V8-WA1">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gk-PF-XuU">
+                                            <rect key="frame" x="10" y="0.0" width="394" height="43.5"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1Gk-PF-XuU" firstAttribute="leading" secondItem="UWt-V8-WA1" secondAttribute="leading" constant="10" id="5jp-kb-flK"/>
+                                        <constraint firstAttribute="trailing" secondItem="1Gk-PF-XuU" secondAttribute="trailing" constant="10" id="67B-cB-TO6"/>
+                                        <constraint firstItem="1Gk-PF-XuU" firstAttribute="top" secondItem="UWt-V8-WA1" secondAttribute="top" id="IId-rb-zmV"/>
+                                        <constraint firstAttribute="bottom" secondItem="1Gk-PF-XuU" secondAttribute="bottom" id="IPW-Vo-Prg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -285,10 +299,13 @@
                             <outlet property="delegate" destination="HaY-ni-RMk" id="y94-vV-g2C"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Winning Numbers" id="7fz-iN-N0E">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="a25-4R-ZeZ"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDE-91-FLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="58"/>
+            <point key="canvasLocation" x="1440.5797101449277" y="57.589285714285708"/>
         </scene>
     </scenes>
     <resources>
