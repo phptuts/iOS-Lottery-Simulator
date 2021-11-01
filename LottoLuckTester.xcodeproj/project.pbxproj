@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		475AFA230D7CABE91938CA99 /* Pods_LottoLuckTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11E03B07B997F7385BB4E5F /* Pods_LottoLuckTester.framework */; };
 		8F3CC4DE272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CC4DD272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift */; };
+		8F444E94273075D7008D0644 /* WinningNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F444E93273075D7008D0644 /* WinningNumbersTableViewCell.swift */; };
 		8F7BCC5B2712B6EE00B6CF19 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8FA46A192712B41D00B0CF5F /* fonts */; };
 		8F7BCC5D2714CECC00B6CF19 /* TextFieldNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BCC5C2714CECC00B6CF19 /* TextFieldNumberValidator.swift */; };
 		8F7BCC5F271BAB1300B6CF19 /* LotteryCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BCC5E271BAB1300B6CF19 /* LotteryCalculator.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0C22825101362B9A6D90C1B8 /* Pods-LottoLuckTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoLuckTester.release.xcconfig"; path = "Target Support Files/Pods-LottoLuckTester/Pods-LottoLuckTester.release.xcconfig"; sourceTree = "<group>"; };
 		8F3CC4DD272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumbersTableViewController.swift; sourceTree = "<group>"; };
+		8F444E93273075D7008D0644 /* WinningNumbersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningNumbersTableViewCell.swift; sourceTree = "<group>"; };
 		8F7BCC5C2714CECC00B6CF19 /* TextFieldNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldNumberValidator.swift; sourceTree = "<group>"; };
 		8F7BCC5E271BAB1300B6CF19 /* LotteryCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryCalculator.swift; sourceTree = "<group>"; };
 		8FA46A15271115D400B0CF5F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				8FA46A192712B41D00B0CF5F /* fonts */,
 				8F7BCC5E271BAB1300B6CF19 /* LotteryCalculator.swift */,
 				8F3CC4DD272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift */,
+				8F444E93273075D7008D0644 /* WinningNumbersTableViewCell.swift */,
 			);
 			path = LottoLuckTester;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				8FBBCE5C270FAE7D007F3DEA /* SceneDelegate.swift in Sources */,
 				8FA46A16271115D400B0CF5F /* MainViewController.swift in Sources */,
 				8F7BCC5F271BAB1300B6CF19 /* LotteryCalculator.swift in Sources */,
+				8F444E94273075D7008D0644 /* WinningNumbersTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

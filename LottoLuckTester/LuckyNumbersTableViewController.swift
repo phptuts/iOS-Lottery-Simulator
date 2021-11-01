@@ -8,6 +8,8 @@
 import UIKit
 
 class LuckyNumbersTableViewController: UITableViewController {
+    
+    var rowHeight = 100
 
     var result: LotterySimulationResult = LotterySimulationResult(pickedLottoNumbers: LottoNumbers(powerBall: 32, nums: [2,3,3,4,5]))
 
@@ -36,14 +38,21 @@ class LuckyNumbersTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "luckynumber", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "luckynumber", for: indexPath) as! WinningNumbersTableViewCell
         
         let winningNumber: LottoResult = result.winningLottoResult[indexPath.row]
         
         let numbers = winningNumber.numbers.nums
         
-        cell.textLabel?.text = numbers.map { String($0)}.joined(separator: "-")
-        // Configure the cell...
+        cell.num1TextView.text = String(numbers[0])
+        cell.num2TextView.text = String(numbers[1])
+        cell.num3TextView.text = String(numbers[2])
+        cell.num4TextView.text = String(numbers[3])
+        cell.num5TextView.text = String(numbers[4])
+        cell.powerBallTextView.text = String(winningNumber.numbers.powerBall)
+        cell.moneyLabel.text = winningNumber.dollars.toMoney()
+
+        cell.textLabel?.text = ""
 
         return cell
     }

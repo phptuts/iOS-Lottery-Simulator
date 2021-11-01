@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="886-Bj-Dxf">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -24,36 +24,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucky Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-5R-AL8">
-                                <rect key="frame" x="30" y="103" width="354" height="29"/>
+                                <rect key="frame" x="30" y="103" width="354" height="28.666666666666657"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tickets Per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBd-GQ-jBa">
-                                <rect key="frame" x="30" y="197" width="354" height="29"/>
+                                <rect key="frame" x="30" y="196.66666666666666" width="354" height="28.666666666666657"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-jH-osz">
-                                <rect key="frame" x="30" y="236" width="354" height="34"/>
+                                <rect key="frame" x="30" y="235.33333333333334" width="354" height="34.000000000000028"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-Pj-ZD5">
-                                <rect key="frame" x="28" y="324" width="358" height="31"/>
+                                <rect key="frame" x="28" y="323" width="358" height="31"/>
                                 <connections>
                                     <action selector="sliderYearChanged:" destination="7t8-qT-2a9" eventType="valueChanged" id="u09-R3-zED"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000 Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-zU-0MY">
-                                <rect key="frame" x="30" y="280" width="354" height="29"/>
+                                <rect key="frame" x="30" y="279.33333333333331" width="354" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Qp-Cu-MdU">
-                                <rect key="frame" x="30" y="142" width="354" height="35"/>
+                                <rect key="frame" x="30" y="141.66666666666666" width="354" height="35"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SST-vC-kHR">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="35"/>
@@ -116,7 +116,7 @@
                                 </subviews>
                             </stackView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4n-e7-602">
-                                <rect key="frame" x="30" y="374" width="354" height="64"/>
+                                <rect key="frame" x="30" y="373" width="354" height="64"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="36"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,34 +129,34 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYl-Mc-ocw">
-                                <rect key="frame" x="30" y="458" width="354" height="40"/>
+                                <rect key="frame" x="30" y="457" width="354" height="40"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jackpots: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va6-ZS-MHw">
-                                <rect key="frame" x="30" y="508" width="354" height="39"/>
+                                <rect key="frame" x="30" y="507.00000000000006" width="354" height="38.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLt-CA-AmG">
-                                <rect key="frame" x="30" y="557" width="354" height="40"/>
+                                <rect key="frame" x="30" y="555.66666666666663" width="354" height="40"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-3f-1mk">
-                                <rect key="frame" x="30" y="607" width="354" height="39"/>
+                                <rect key="frame" x="30" y="605.66666666666663" width="354" height="38.666666666666629"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-2H-lPh">
-                                <rect key="frame" x="30" y="666" width="354" height="85.5"/>
+                                <rect key="frame" x="30" y="664.33333333333337" width="354" height="85.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-vH-JwO">
-                                        <rect key="frame" x="0.0" y="0.0" width="172" height="85.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="85.666666666666671"/>
                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Share">
@@ -167,7 +167,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-9x-rdV">
-                                        <rect key="frame" x="182" y="0.0" width="172" height="85.5"/>
+                                        <rect key="frame" x="182" y="0.0" width="172" height="85.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Winning Numbers">
@@ -265,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="-262.31884057971018" y="49.553571428571423"/>
         </scene>
-        <!--Winning Numbers-->
+        <!--History-->
         <scene sceneID="O3g-ol-jbM">
             <objects>
                 <tableViewController id="HaY-ni-RMk" customClass="LuckyNumbersTableViewController" customModule="LottoLuckTester" customModuleProvider="target" sceneMemberID="viewController">
@@ -274,24 +274,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="luckynumber" id="zxF-FA-Fn3">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="luckynumber" rowHeight="131" id="zxF-FA-Fn3" customClass="WinningNumbersTableViewCell" customModule="LottoLuckTester" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zxF-FA-Fn3" id="UWt-V8-WA1">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gk-PF-XuU">
-                                            <rect key="frame" x="10" y="0.0" width="394" height="43.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sxl-q4-mxu">
+                                            <rect key="frame" x="50" y="10" width="314" height="35"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qcr-W3-Wjy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="ugp-Mc-bCy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXP-tc-7UH">
+                                                    <rect key="frame" x="54" y="0.0" width="44" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="Rtk-z8-YeW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FET-Cf-iQF">
+                                                    <rect key="frame" x="108" y="0.0" width="44" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="qrt-5E-fbP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="16" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-aq-4X8">
+                                                    <rect key="frame" x="162" y="0.0" width="44" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="rp7-TL-i9p"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="17" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyn-hE-pQ2">
+                                                    <rect key="frame" x="216" y="0.0" width="44" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="gHi-oD-VMH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2TP-SI-hMv">
+                                                    <rect key="frame" x="270" y="0.0" width="44" height="35"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="RBr-NR-XzU"/>
+                                                    </constraints>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100,000,000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-vC-znz">
+                                            <rect key="frame" x="30" y="60" width="354" height="57.333333333333343"/>
+                                            <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="40"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="1Gk-PF-XuU" firstAttribute="leading" secondItem="UWt-V8-WA1" secondAttribute="leading" constant="10" id="5jp-kb-flK"/>
-                                        <constraint firstAttribute="trailing" secondItem="1Gk-PF-XuU" secondAttribute="trailing" constant="10" id="67B-cB-TO6"/>
-                                        <constraint firstItem="1Gk-PF-XuU" firstAttribute="top" secondItem="UWt-V8-WA1" secondAttribute="top" id="IId-rb-zmV"/>
-                                        <constraint firstAttribute="bottom" secondItem="1Gk-PF-XuU" secondAttribute="bottom" id="IPW-Vo-Prg"/>
+                                        <constraint firstItem="C3l-vC-znz" firstAttribute="leading" secondItem="UWt-V8-WA1" secondAttribute="leadingMargin" constant="10" id="FM4-5k-ErQ"/>
+                                        <constraint firstItem="sxl-q4-mxu" firstAttribute="top" secondItem="UWt-V8-WA1" secondAttribute="top" constant="10" id="SnM-HS-BJU"/>
+                                        <constraint firstItem="sxl-q4-mxu" firstAttribute="centerX" secondItem="UWt-V8-WA1" secondAttribute="centerX" id="awk-gS-XGB"/>
+                                        <constraint firstItem="C3l-vC-znz" firstAttribute="top" secondItem="sxl-q4-mxu" secondAttribute="bottom" constant="15" id="beV-MX-XEW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="C3l-vC-znz" secondAttribute="trailing" constant="10" id="dus-ba-TP7"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="moneyLabel" destination="C3l-vC-znz" id="hp2-V4-mvH"/>
+                                    <outlet property="num1TextView" destination="Qcr-W3-Wjy" id="pRr-yY-EKa"/>
+                                    <outlet property="num2TextView" destination="lXP-tc-7UH" id="KHl-sT-EpV"/>
+                                    <outlet property="num3TextView" destination="FET-Cf-iQF" id="mBO-4T-iHP"/>
+                                    <outlet property="num4TextView" destination="eTh-aq-4X8" id="l08-DM-Kjx"/>
+                                    <outlet property="num5TextView" destination="xyn-hE-pQ2" id="0Q7-6Q-mpf"/>
+                                    <outlet property="powerBallTextView" destination="2TP-SI-hMv" id="Vgv-wg-GQN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -299,8 +367,8 @@
                             <outlet property="delegate" destination="HaY-ni-RMk" id="y94-vV-g2C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Winning Numbers" id="7fz-iN-N0E">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="a25-4R-ZeZ"/>
+                    <navigationItem key="navigationItem" title="History" id="7fz-iN-N0E">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="VMZ-Kb-whd"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDE-91-FLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
