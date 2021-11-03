@@ -181,7 +181,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wKO-mE-ORA"/>
-                        <color key="backgroundColor" red="0.88028687522800275" green="0.54831792372945221" blue="0.15752672945753421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.54831792372945221" blue="0.15752672945753421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aRB-2H-lPh" firstAttribute="top" secondItem="DSF-3f-1mk" secondAttribute="bottom" constant="20" id="38l-kQ-3AM"/>
                             <constraint firstItem="wKO-mE-ORA" firstAttribute="trailing" secondItem="8KK-jH-osz" secondAttribute="trailing" constant="30" id="55k-Oo-Ubr"/>
@@ -282,62 +282,62 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sxl-q4-mxu">
-                                            <rect key="frame" x="50" y="10" width="314" height="35"/>
+                                            <rect key="frame" x="38" y="10" width="338" height="35"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qcr-W3-Wjy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="35"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="ugp-Mc-bCy"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXP-tc-7UH">
-                                                    <rect key="frame" x="54" y="0.0" width="44" height="35"/>
+                                                    <rect key="frame" x="58" y="0.0" width="48" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Rtk-z8-YeW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FET-Cf-iQF">
-                                                    <rect key="frame" x="108" y="0.0" width="44" height="35"/>
+                                                    <rect key="frame" x="116" y="0.0" width="48" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="qrt-5E-fbP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="16" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-aq-4X8">
-                                                    <rect key="frame" x="162" y="0.0" width="44" height="35"/>
+                                                    <rect key="frame" x="174" y="0.0" width="48" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="rp7-TL-i9p"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="17" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyn-hE-pQ2">
-                                                    <rect key="frame" x="216" y="0.0" width="44" height="35"/>
+                                                    <rect key="frame" x="232" y="0.0" width="48" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="gHi-oD-VMH"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2TP-SI-hMv">
-                                                    <rect key="frame" x="270" y="0.0" width="44" height="35"/>
+                                                    <rect key="frame" x="290" y="0.0" width="48" height="35"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="RBr-NR-XzU"/>
                                                     </constraints>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100,000,000.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-vC-znz">
-                                            <rect key="frame" x="30" y="60" width="354" height="57.333333333333343"/>
+                                            <rect key="frame" x="30" y="60" width="354" height="55"/>
                                             <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="40"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -349,6 +349,7 @@
                                         <constraint firstItem="sxl-q4-mxu" firstAttribute="centerX" secondItem="UWt-V8-WA1" secondAttribute="centerX" id="awk-gS-XGB"/>
                                         <constraint firstItem="C3l-vC-znz" firstAttribute="top" secondItem="sxl-q4-mxu" secondAttribute="bottom" constant="15" id="beV-MX-XEW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="C3l-vC-znz" secondAttribute="trailing" constant="10" id="dus-ba-TP7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="C3l-vC-znz" secondAttribute="bottom" constant="5" id="lna-bU-hkm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

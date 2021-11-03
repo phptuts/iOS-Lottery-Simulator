@@ -12,6 +12,9 @@ class LuckyNumbersTableViewController: UITableViewController {
     var rowHeight = 100
 
     var result: LotterySimulationResult = LotterySimulationResult(pickedLottoNumbers: LottoNumbers(powerBall: 32, nums: [2,3,3,4,5]))
+    
+    let evenColor = UIColor.init(red: 224.0 / 255, green: 140 / 255, blue: 40 / 255, alpha: 1)
+    let oldColor = UIColor.orange
 
     
     override func viewDidLoad() {
@@ -42,13 +45,61 @@ class LuckyNumbersTableViewController: UITableViewController {
         
         let winningNumber: LottoResult = result.winningLottoResult[indexPath.row]
         
+        if (indexPath.row % 2 == 0) {
+            cell.backgroundColor = evenColor
+        } else {
+            cell.backgroundColor = oldColor
+        }
+                
         let numbers = winningNumber.numbers.nums
         
         cell.num1TextView.text = String(numbers[0])
+        
+        var highlightedNums: [Int] = []
+        
+        if (result.pickedLottoNumbers.nums.contains(numbers[0])) {
+            cell.num1TextView.backgroundColor = .green
+            cell.num1TextView.textColor = .white
+            highlightedNums.append(numbers[0])
+        }
+        
         cell.num2TextView.text = String(numbers[1])
+        
+        if (result.pickedLottoNumbers.nums.contains(numbers[1]) && !highlightedNums.contains(numbers[1])) {
+            cell.num2TextView.backgroundColor = .green
+            cell.num2TextView.textColor = .white
+            highlightedNums.append(numbers[1])
+        }
+        
         cell.num3TextView.text = String(numbers[2])
+        
+        if (result.pickedLottoNumbers.nums.contains(numbers[2])  && !highlightedNums.contains(numbers[2])) {
+            cell.num3TextView.backgroundColor = .green
+            cell.num3TextView.textColor = .white
+            highlightedNums.append(numbers[2])
+        }
+        
         cell.num4TextView.text = String(numbers[3])
+        
+        if (result.pickedLottoNumbers.nums.contains(numbers[3]) && !highlightedNums.contains(numbers[3])) {
+            cell.num4TextView.backgroundColor = .green
+            cell.num4TextView.textColor = .white
+            highlightedNums.append(numbers[3])
+        }
+        
         cell.num5TextView.text = String(numbers[4])
+        
+        if (result.pickedLottoNumbers.nums.contains(numbers[4]) && !highlightedNums.contains(numbers[4])) {
+            cell.num5TextView.backgroundColor = .green
+            cell.num5TextView.textColor = .white
+            highlightedNums.append(numbers[4])
+        }
+        
+        if (result.pickedLottoNumbers.powerBall == winningNumber.numbers.powerBall) {
+            cell.powerBallTextView.backgroundColor = .green
+            cell.powerBallTextView.textColor = .white
+        }
+        
         cell.powerBallTextView.text = String(winningNumber.numbers.powerBall)
         cell.moneyLabel.text = winningNumber.dollars.toMoney()
 

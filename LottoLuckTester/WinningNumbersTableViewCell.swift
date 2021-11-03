@@ -19,11 +19,17 @@ class WinningNumbersTableViewCell: UITableViewCell {
     @IBOutlet weak var powerBallTextView: UITextField!
     @IBOutlet weak var moneyLabel: UILabel!
     
-    
+    // Ask JASON about putting initiliaztion code here:
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        num1TextView.isEnabled = false
+        num2TextView.isEnabled = false
+        num3TextView.isEnabled = false
+        num4TextView.isEnabled = false
+        num5TextView.isEnabled = false
+        powerBallTextView.isEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,5 +37,6 @@ class WinningNumbersTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }
