@@ -36,18 +36,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8KK-jH-osz">
-                                <rect key="frame" x="30" y="235.33333333333334" width="354" height="34.000000000000028"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="30" y="235.33333333333334" width="354" height="38.333333333333343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-Pj-ZD5">
-                                <rect key="frame" x="28" y="323" width="358" height="31"/>
+                                <rect key="frame" x="28" y="327.33333333333331" width="358" height="31"/>
                                 <connections>
                                     <action selector="sliderYearChanged:" destination="7t8-qT-2a9" eventType="valueChanged" id="u09-R3-zED"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000 Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-zU-0MY">
-                                <rect key="frame" x="30" y="279.33333333333331" width="354" height="28.666666666666686"/>
+                                <rect key="frame" x="30" y="283.66666666666669" width="354" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,42 +59,52 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SST-vC-kHR">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="ctw-Jc-hh3"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THj-CO-ra5">
                                         <rect key="frame" x="52" y="0.0" width="42" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="bd5-4Z-hxk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O64-ce-Siv">
                                         <rect key="frame" x="104" y="0.0" width="42" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="CrB-tK-Xav"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="16" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EYI-Ca-gd0">
                                         <rect key="frame" x="156" y="0.0" width="42" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="iqh-ex-p56"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="17" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-ij-gBi">
                                         <rect key="frame" x="208" y="0.0" width="42" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="er3-6h-Fbd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JcN-8R-Lrr">
@@ -102,7 +114,7 @@
                                             <constraint firstAttribute="height" constant="35" id="jVH-gj-Zom"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-Yd-7ko">
@@ -116,7 +128,7 @@
                                 </subviews>
                             </stackView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4n-e7-602">
-                                <rect key="frame" x="30" y="373" width="354" height="64"/>
+                                <rect key="frame" x="30" y="377.33333333333331" width="354" height="64"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="36"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,31 +141,31 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYl-Mc-ocw">
-                                <rect key="frame" x="30" y="457" width="354" height="40"/>
+                                <rect key="frame" x="30" y="461.33333333333331" width="354" height="40"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jackpots: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va6-ZS-MHw">
-                                <rect key="frame" x="30" y="507.00000000000006" width="354" height="38.666666666666686"/>
+                                <rect key="frame" x="30" y="511.33333333333331" width="354" height="38.666666666666686"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLt-CA-AmG">
-                                <rect key="frame" x="30" y="555.66666666666663" width="354" height="40"/>
+                                <rect key="frame" x="30" y="560" width="354" height="40"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-3f-1mk">
-                                <rect key="frame" x="30" y="605.66666666666663" width="354" height="38.666666666666629"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Won:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-3f-1mk">
+                                <rect key="frame" x="30" y="610" width="354" height="38.666666666666629"/>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aRB-2H-lPh">
-                                <rect key="frame" x="30" y="664.33333333333337" width="354" height="85.666666666666629"/>
+                                <rect key="frame" x="30" y="668.66666666666663" width="354" height="85.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ja-vH-JwO">
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="85.666666666666671"/>
@@ -231,11 +243,13 @@
                         <outlet property="lottoNum6" destination="JcN-8R-Lrr" id="6eC-BN-JUm"/>
                         <outlet property="playButton" destination="F4n-e7-602" id="lxP-XB-65C"/>
                         <outlet property="refreshButton" destination="qpr-Yd-7ko" id="JkO-VD-vuX"/>
+                        <outlet property="shareBtn" destination="2Ja-vH-JwO" id="sOq-Y8-GxP"/>
                         <outlet property="spentLabel" destination="GLt-CA-AmG" id="uH0-AB-Men"/>
                         <outlet property="ticketPerTextField" destination="8KK-jH-osz" id="UEz-jZ-dtF"/>
                         <outlet property="totalJackpotLabel" destination="va6-ZS-MHw" id="Zyi-uF-kOk"/>
                         <outlet property="totalYearsLabel" destination="MYl-Mc-ocw" id="FNX-vF-Ofj"/>
                         <outlet property="winningLabel" destination="DSF-3f-1mk" id="xNU-Sk-y2v"/>
+                        <outlet property="winningNumberBtn" destination="mzW-9x-rdV" id="gxm-7e-6lp"/>
                         <outlet property="yearLabel" destination="dNd-zU-0MY" id="XJw-VP-Li8"/>
                         <outlet property="yearSlider" destination="b4v-Pj-ZD5" id="evw-8Z-xY5"/>
                     </connections>
@@ -286,41 +300,51 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qcr-W3-Wjy">
                                                     <rect key="frame" x="0.0" y="0.0" width="48" height="35"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="ugp-Mc-bCy"/>
                                                     </constraints>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="13" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXP-tc-7UH">
                                                     <rect key="frame" x="58" y="0.0" width="48" height="35"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Rtk-z8-YeW"/>
                                                     </constraints>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FET-Cf-iQF">
                                                     <rect key="frame" x="116" y="0.0" width="48" height="35"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="qrt-5E-fbP"/>
                                                     </constraints>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="16" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-aq-4X8">
                                                     <rect key="frame" x="174" y="0.0" width="48" height="35"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="rp7-TL-i9p"/>
                                                     </constraints>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="17" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyn-hE-pQ2">
                                                     <rect key="frame" x="232" y="0.0" width="48" height="35"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="gHi-oD-VMH"/>
                                                     </constraints>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>

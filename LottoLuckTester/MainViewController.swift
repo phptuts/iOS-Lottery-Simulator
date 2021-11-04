@@ -16,8 +16,10 @@ class MainViewController: UIViewController {
     let lottoGoldValidator = TextFieldNumberValidator(min: 1, max: 25)
     let ticketValidator = TextFieldNumberValidator(min: 1, max: 1000)
     
-    var running = false
+    var runningSimulation = false
 
+    @IBOutlet weak var winningNumberBtn: UIButton!
+    @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var winningLabel: UILabel!
     @IBOutlet weak var spentLabel: UILabel!
     @IBOutlet weak var totalJackpotLabel: UILabel!
@@ -46,7 +48,9 @@ class MainViewController: UIViewController {
         ticketPerTextField?.delegate = ticketValidator
         refreshButton.setTitle("", for: .normal)
         randomNumbers()
-        changeButton("Play", color: .orange)
+        changeButton(playButton, "Play", color: .orange)
+        changeButton(self.winningNumberBtn, "Winning Numbers", color: .systemGreen, 20)
+        changeButton(self.shareBtn, "Share", color: .systemPink, 20)
     }
 
 
@@ -68,11 +72,12 @@ class MainViewController: UIViewController {
     
     @IBAction func shareView(_ sender: Any) {
         
-        let years = Int(round(yearSlider.value) * 10000)
+        guard let ticketsPerYear = Int(ticketPerTextField.text ?? "1") else {
+            return
+        }
         
-        let yearsText = years == 1_000_000 ? "1 Million Years" : "\(years.withCommas()) Years"
         
-        let message = "I played lotto for \(yearsText)!!"
+        let message = "I played lotto for \(self.lottoSimulationResult.numberOfYears(ticketsPerYear: ticketsPerYear)) years!"
         
         // This code was copied from stackoverflow
         // link: https://stackoverflow.com/a/44036814
@@ -101,8 +106,8 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func playLotto(_ sender: Any) {
-        if running == true {
-            running = false
+        if runningSimulation == true {
+            runningSimulation = false
             return
         }
         
@@ -139,18 +144,21 @@ class MainViewController: UIViewController {
         self.lottoSimulationResult = LotterySimulationResult(pickedLottoNumbers: pickedLottoNumbers)
         var yearCount = 0;
         
-        self.running = true
-        changeButton("Stop", color: .red)
+        self.runningSimulation = true
+        changeButton(self.playButton, "Stop", color: .red)
         let queue = DispatchQueue(label: "thread-safe-obj", attributes: .concurrent)
 
         queue.async {
             for i in 1...(ticketsPerYear * years) {
-                let lotteryResult = runSimulation(pickedLottoNumbers)
-                self.lottoSimulationResult.addResult(lotteryResult)
-                if self.running == false {
+                
+                if self.runningSimulation == false {
                     break
                 }
-                if i % (ticketsPerYear * 50) == 0 {
+                
+                let lotteryResult = runSimulation(pickedLottoNumbers)
+                self.lottoSimulationResult.addResult(lotteryResult)
+                
+                if i % (ticketsPerYear * 1) == 0 {
                     // This needs to be sync because we need to stop the queue thread
                     // So that we don't accidentially create another lotteryResult object that might get de allocated from the
                     // memory and cause a crash.  The sync will stop the for loop from running and update the ui.
@@ -158,19 +166,18 @@ class MainViewController: UIViewController {
                     // The problem is some variable is being accessed by different threads at the same time
                     // by using sync we make it so that only one thread can access the variable at a time.
                     DispatchQueue.main.sync {
-                            yearCount += 50
+                            yearCount += 1
                         
                         self.totalYearsLabel.text = "Years: \(yearCount.withCommas())"
                         self.totalJackpotLabel.text = "Jackpots: \(self.lottoSimulationResult.jackPots())"
                         self.spentLabel.text = "Spent: \(self.lottoSimulationResult.spent().toMoney())"
-                        self.winningLabel.text = "Winnings: \(self.lottoSimulationResult.won().toMoney())"
+                        self.winningLabel.text = "Won: \(self.lottoSimulationResult.won().toMoney())"
                     }
                 }
             }
             DispatchQueue.main.async {
-                self.changeButton("Play Again!", color: UIColor.orange)
-                self.running = false
-                print(self.lottoSimulationResult.winningLottoResult.count)
+                self.changeButton(self.playButton, "Play Again!", color: UIColor.orange)
+                self.runningSimulation = false
             }
             
         }
@@ -182,23 +189,23 @@ class MainViewController: UIViewController {
         totalJackpotLabel.text = "Jackpots: "
         spentLabel.text = "Spent: "
         winningLabel.text = "Winnings: "
-        changeButton("Play", color: .orange)
+        changeButton(self.playButton, "Play", color: .orange)
     }
     
-    func changeButton(_ text: String, color: UIColor) {
+    func changeButton(_ button: UIButton, _ text: String, color: UIColor, _ fontSize: Int = 36) {
+        let cgFontSize = CGFloat(fontSize)
         let myNormalAttributedTitle = NSMutableAttributedString(string: text,
                                                          attributes: [
                                                             NSAttributedString.Key.foregroundColor : UIColor.white,
-                                                            NSAttributedString.Key.font: UIFont(name: "PermanentMarker-Regular", size: 36.0) ?? UIFont.systemFont(ofSize:   36.0)
+                                                            NSAttributedString.Key.font: UIFont(name: "PermanentMarker-Regular", size: cgFontSize) ?? UIFont.systemFont(ofSize:   cgFontSize)
                                                          ])
-        playButton.setAttributedTitle(myNormalAttributedTitle, for: .normal)
-        playButton.layer.cornerRadius = 4
-        playButton.layer.backgroundColor = color.cgColor
+        button.setAttributedTitle(myNormalAttributedTitle, for: .normal)
+        button.layer.cornerRadius = 4
+        button.layer.backgroundColor = color.cgColor
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        print("GOT HERE")
         if segue.destination is LuckyNumbersTableViewController {
             let vc = segue.destination as? LuckyNumbersTableViewController
             vc?.result = self.lottoSimulationResult
