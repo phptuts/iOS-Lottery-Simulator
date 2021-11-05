@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var lottoSimulationResult: LotterySimulationResult = LotterySimulationResult(pickedLottoNumbers: LottoNumbers(powerBall: 32, nums: [2,3,3,4,5]))
+    var lottoSimulationResult: LotterySimulationResult = LotterySimulationResult(pickedLottoNumbers: LottoNumbers(powerBall: 32, nums: [2,3,3,4,5]), ticketsPerYear: 10000)
 
     // has to declared here bcause it will be destroy in memory, because it's in the stack
     let lottoValidator = TextFieldNumberValidator(min: 1, max: 70)
@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
         refreshButton.setTitle("", for: .normal)
         randomNumbers()
         changeButton(playButton, "Play", color: .orange)
-        changeButton(self.winningNumberBtn, "Winning Numbers", color: .systemGreen, 20)
+        changeButton(self.winningNumberBtn, "Lucky Numbers", color: .systemGreen, 20)
         changeButton(self.shareBtn, "Share", color: .systemPink, 20)
     }
 
@@ -71,13 +71,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func shareView(_ sender: Any) {
-        
-        guard let ticketsPerYear = Int(ticketPerTextField.text ?? "1") else {
-            return
-        }
-        
-        
-        let message = "I played lotto for \(self.lottoSimulationResult.numberOfYears(ticketsPerYear: ticketsPerYear)) years!"
+       
+        let message = "I played lotto for \(self.lottoSimulationResult.numberOfYears.withCommas()) years!"
         
         // This code was copied from stackoverflow
         // link: https://stackoverflow.com/a/44036814
@@ -141,8 +136,7 @@ class MainViewController: UIViewController {
         let years = Int(round(yearSlider.value) * 10000)
 
         let pickedLottoNumbers = LottoNumbers(powerBall: powerball, nums: [num1, num2, num3, num4, num5])
-        self.lottoSimulationResult = LotterySimulationResult(pickedLottoNumbers: pickedLottoNumbers)
-        var yearCount = 0;
+        self.lottoSimulationResult = LotterySimulationResult(pickedLottoNumbers: pickedLottoNumbers, ticketsPerYear: ticketsPerYear)
         
         self.runningSimulation = true
         changeButton(self.playButton, "Stop", color: .red)
@@ -158,7 +152,7 @@ class MainViewController: UIViewController {
                 let lotteryResult = runSimulation(pickedLottoNumbers)
                 self.lottoSimulationResult.addResult(lotteryResult)
                 
-                if i % (ticketsPerYear * 1) == 0 {
+                if i % 2000 == 0 {
                     // This needs to be sync because we need to stop the queue thread
                     // So that we don't accidentially create another lotteryResult object that might get de allocated from the
                     // memory and cause a crash.  The sync will stop the for loop from running and update the ui.
@@ -166,12 +160,10 @@ class MainViewController: UIViewController {
                     // The problem is some variable is being accessed by different threads at the same time
                     // by using sync we make it so that only one thread can access the variable at a time.
                     DispatchQueue.main.sync {
-                            yearCount += 1
-                        
-                        self.totalYearsLabel.text = "Years: \(yearCount.withCommas())"
-                        self.totalJackpotLabel.text = "Jackpots: \(self.lottoSimulationResult.jackPots())"
-                        self.spentLabel.text = "Spent: \(self.lottoSimulationResult.spent().toMoney())"
-                        self.winningLabel.text = "Won: \(self.lottoSimulationResult.won().toMoney())"
+                        self.totalYearsLabel.text = "Years: \(self.lottoSimulationResult.numberOfYears.withCommas())"
+                        self.totalJackpotLabel.text = "Jackpots: \(self.lottoSimulationResult.jackPots)"
+                        self.spentLabel.text = "Spent: \(self.lottoSimulationResult.spent.toMoney())"
+                        self.winningLabel.text = "Won: \(self.lottoSimulationResult.won.toMoney())"
                     }
                 }
             }

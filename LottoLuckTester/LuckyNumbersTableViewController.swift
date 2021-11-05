@@ -11,7 +11,7 @@ class LuckyNumbersTableViewController: UITableViewController {
     
     var rowHeight = 100
 
-    var result: LotterySimulationResult = LotterySimulationResult(pickedLottoNumbers: LottoNumbers(powerBall: 32, nums: [2,3,3,4,5]))
+    var result: LotterySimulationResult = LotterySimulationResult(pickedLottoNumbers: LottoNumbers(powerBall: 32, nums: [2,3,3,4,5]), ticketsPerYear: 1)
     
     let evenColor = UIColor.init(red: 224.0 / 255, green: 140 / 255, blue: 40 / 255, alpha: 1)
     let oldColor = UIColor.orange
@@ -45,23 +45,23 @@ class LuckyNumbersTableViewController: UITableViewController {
         let winningNumber: LottoResult = result.winningLottoResult[indexPath.row]
         
         
-        cell.num1TextView.text = String(winningNumber.numbers.nums[0].0)
-        cell.num2TextView.text = String(winningNumber.numbers.nums[1].0)
-        cell.num3TextView.text = String(winningNumber.numbers.nums[2].0)
-        cell.num4TextView.text = String(winningNumber.numbers.nums[3].0)
-        cell.num5TextView.text = String(winningNumber.numbers.nums[4].0)
-        cell.powerBallTextView.text = String(winningNumber.numbers.powerBall.0)
+        cell.num1TextView.text = String(winningNumber.numbers.nums[0].number)
+        cell.num2TextView.text = String(winningNumber.numbers.nums[1].number)
+        cell.num3TextView.text = String(winningNumber.numbers.nums[2].number)
+        cell.num4TextView.text = String(winningNumber.numbers.nums[3].number)
+        cell.num5TextView.text = String(winningNumber.numbers.nums[4].number)
+        cell.powerBallTextView.text = String(winningNumber.numbers.powerBall.number)
         cell.moneyLabel.text = winningNumber.dollars.toMoney()
 
         cell.textLabel?.text = ""
 
-        highlightWinningNumber(cell.num1TextView, winningNumber.numbers.nums[0].1)
-        highlightWinningNumber(cell.num2TextView, winningNumber.numbers.nums[1].1)
-        highlightWinningNumber(cell.num3TextView, winningNumber.numbers.nums[2].1)
-        highlightWinningNumber(cell.num4TextView, winningNumber.numbers.nums[3].1)
-        highlightWinningNumber(cell.num5TextView, winningNumber.numbers.nums[4].1)
-        highlightWinningNumber(cell.num5TextView, winningNumber.numbers.nums[4].1)
-        highlightWinningNumber(cell.powerBallTextView, winningNumber.numbers.powerBall.1, true)
+        highlightWinningNumber(cell.num1TextView, winningNumber.numbers.nums[0].isMatch)
+        highlightWinningNumber(cell.num2TextView, winningNumber.numbers.nums[1].isMatch)
+        highlightWinningNumber(cell.num3TextView, winningNumber.numbers.nums[2].isMatch)
+        highlightWinningNumber(cell.num4TextView, winningNumber.numbers.nums[3].isMatch)
+        highlightWinningNumber(cell.num5TextView, winningNumber.numbers.nums[4].isMatch)
+        highlightWinningNumber(cell.num5TextView, winningNumber.numbers.nums[4].isMatch)
+        highlightWinningNumber(cell.powerBallTextView, winningNumber.numbers.powerBall.isMatch, true)
 
         return cell
     }

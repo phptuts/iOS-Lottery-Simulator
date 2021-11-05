@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		475AFA230D7CABE91938CA99 /* Pods_LottoLuckTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11E03B07B997F7385BB4E5F /* Pods_LottoLuckTester.framework */; };
+		8F17EB2F2734A9250099599C /* LottoLuckTesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17EB2E2734A9250099599C /* LottoLuckTesterTests.swift */; };
 		8F3CC4DE272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CC4DD272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift */; };
 		8F444E94273075D7008D0644 /* WinningNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F444E93273075D7008D0644 /* WinningNumbersTableViewCell.swift */; };
 		8F7BCC5B2712B6EE00B6CF19 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8FA46A192712B41D00B0CF5F /* fonts */; };
@@ -22,8 +23,20 @@
 		8FBBCE69270FAE7F007F3DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBCE67270FAE7F007F3DEA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8F17EB302734A9250099599C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FBBCE4E270FAE7D007F3DEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FBBCE55270FAE7D007F3DEA;
+			remoteInfo = LottoLuckTester;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0C22825101362B9A6D90C1B8 /* Pods-LottoLuckTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoLuckTester.release.xcconfig"; path = "Target Support Files/Pods-LottoLuckTester/Pods-LottoLuckTester.release.xcconfig"; sourceTree = "<group>"; };
+		8F17EB2C2734A9250099599C /* LottoLuckTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottoLuckTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F17EB2E2734A9250099599C /* LottoLuckTesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoLuckTesterTests.swift; sourceTree = "<group>"; };
 		8F3CC4DD272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyNumbersTableViewController.swift; sourceTree = "<group>"; };
 		8F444E93273075D7008D0644 /* WinningNumbersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningNumbersTableViewCell.swift; sourceTree = "<group>"; };
 		8F7BCC5C2714CECC00B6CF19 /* TextFieldNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldNumberValidator.swift; sourceTree = "<group>"; };
@@ -43,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F17EB292734A9250099599C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FBBCE53270FAE7D007F3DEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,10 +82,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F17EB2D2734A9250099599C /* LottoLuckTesterTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F17EB2E2734A9250099599C /* LottoLuckTesterTests.swift */,
+			);
+			path = LottoLuckTesterTests;
+			sourceTree = "<group>";
+		};
 		8FBBCE4D270FAE7D007F3DEA = {
 			isa = PBXGroup;
 			children = (
 				8FBBCE58270FAE7D007F3DEA /* LottoLuckTester */,
+				8F17EB2D2734A9250099599C /* LottoLuckTesterTests */,
 				8FBBCE57270FAE7D007F3DEA /* Products */,
 				9404B82A1400BE99BB0D425E /* Pods */,
 				7103A899297C2D283B2BF578 /* Frameworks */,
@@ -76,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				8FBBCE56270FAE7D007F3DEA /* LottoLuckTester.app */,
+				8F17EB2C2734A9250099599C /* LottoLuckTesterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +142,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8F17EB2B2734A9250099599C /* LottoLuckTesterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F17EB322734A9250099599C /* Build configuration list for PBXNativeTarget "LottoLuckTesterTests" */;
+			buildPhases = (
+				8F17EB282734A9250099599C /* Sources */,
+				8F17EB292734A9250099599C /* Frameworks */,
+				8F17EB2A2734A9250099599C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F17EB312734A9250099599C /* PBXTargetDependency */,
+			);
+			name = LottoLuckTesterTests;
+			productName = LottoLuckTesterTests;
+			productReference = 8F17EB2C2734A9250099599C /* LottoLuckTesterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8FBBCE55270FAE7D007F3DEA /* LottoLuckTester */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FBBCE6D270FAE7F007F3DEA /* Build configuration list for PBXNativeTarget "LottoLuckTester" */;
@@ -137,9 +185,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					8F17EB2B2734A9250099599C = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 8FBBCE55270FAE7D007F3DEA;
+					};
 					8FBBCE55270FAE7D007F3DEA = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -159,11 +211,19 @@
 			projectRoot = "";
 			targets = (
 				8FBBCE55270FAE7D007F3DEA /* LottoLuckTester */,
+				8F17EB2B2734A9250099599C /* LottoLuckTesterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F17EB2A2734A9250099599C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FBBCE54270FAE7D007F3DEA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +263,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F17EB282734A9250099599C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F17EB2F2734A9250099599C /* LottoLuckTesterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FBBCE52270FAE7D007F3DEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +287,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F17EB312734A9250099599C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FBBCE55270FAE7D007F3DEA /* LottoLuckTester */;
+			targetProxy = 8F17EB302734A9250099599C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8FBBCE5F270FAE7D007F3DEA /* Main.storyboard */ = {
@@ -240,6 +316,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8F17EB332734A9250099599C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8F6L8PBYP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingwithnoah.LottoLuckTesterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LottoLuckTester.app/LottoLuckTester";
+			};
+			name = Debug;
+		};
+		8F17EB342734A9250099599C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8F6L8PBYP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingwithnoah.LottoLuckTesterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LottoLuckTester.app/LottoLuckTester";
+			};
+			name = Release;
+		};
 		8FBBCE6B270FAE7F007F3DEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -419,6 +541,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F17EB322734A9250099599C /* Build configuration list for PBXNativeTarget "LottoLuckTesterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F17EB332734A9250099599C /* Debug */,
+				8F17EB342734A9250099599C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8FBBCE51270FAE7D007F3DEA /* Build configuration list for PBXProject "LottoLuckTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

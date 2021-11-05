@@ -182,7 +182,7 @@
                                         <rect key="frame" x="182" y="0.0" width="172" height="85.666666666666671"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Winning Numbers">
+                                        <buttonConfiguration key="configuration" style="filled" title="Lucky Numbers" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -190,6 +190,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="mzW-9x-rdV" firstAttribute="width" secondItem="2Ja-vH-JwO" secondAttribute="width" id="2px-p0-coi"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wKO-mE-ORA"/>
