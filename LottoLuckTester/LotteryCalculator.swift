@@ -31,7 +31,7 @@ struct LottoNumberMatches {
 struct LottoResult {
     let numbers: LottoNumberMatches
     
-    init (_ actual: LottoNumbers, _ picked: LottoNumbers) {
+    init ( actual: LottoNumbers,  picked: LottoNumbers) {
         var userPickedNumbers = picked.nums
         let actualLotteryNumbers = actual.nums;
         
@@ -132,7 +132,7 @@ func runSimulation(_ pickedLottoNumbers: LottoNumbers) -> LottoResult {
     let powerBallNumber = Int.random(in: 1..<26)
     let randomLottoNumbers = LottoNumbers(powerBall: powerBallNumber, nums: randonNums)
     
-    return LottoResult(randomLottoNumbers, pickedLottoNumbers)
+    return LottoResult(actual: randomLottoNumbers, picked: pickedLottoNumbers)
 }
 
 
