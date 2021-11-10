@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		475AFA230D7CABE91938CA99 /* Pods_LottoLuckTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11E03B07B997F7385BB4E5F /* Pods_LottoLuckTester.framework */; };
 		8F17EB2F2734A9250099599C /* LottoLuckTesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F17EB2E2734A9250099599C /* LottoLuckTesterTests.swift */; };
 		8F3CC4DE272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3CC4DD272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift */; };
 		8F444E94273075D7008D0644 /* WinningNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F444E93273075D7008D0644 /* WinningNumbersTableViewCell.swift */; };
@@ -18,7 +17,6 @@
 		8FBBCE5A270FAE7D007F3DEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBCE59270FAE7D007F3DEA /* AppDelegate.swift */; };
 		8FBBCE5C270FAE7D007F3DEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBCE5B270FAE7D007F3DEA /* SceneDelegate.swift */; };
 		8FBBCE61270FAE7D007F3DEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBCE5F270FAE7D007F3DEA /* Main.storyboard */; };
-		8FBBCE64270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBCE62270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld */; };
 		8FBBCE66270FAE7F007F3DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBCE65270FAE7F007F3DEA /* Assets.xcassets */; };
 		8FBBCE69270FAE7F007F3DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBCE67270FAE7F007F3DEA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -47,7 +45,6 @@
 		8FBBCE59270FAE7D007F3DEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FBBCE5B270FAE7D007F3DEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8FBBCE60270FAE7D007F3DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8FBBCE63270FAE7D007F3DEA /* LottoLuckTester.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LottoLuckTester.xcdatamodel; sourceTree = "<group>"; };
 		8FBBCE65270FAE7F007F3DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FBBCE68270FAE7F007F3DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FBBCE6A270FAE7F007F3DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				475AFA230D7CABE91938CA99 /* Pods_LottoLuckTester.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +116,6 @@
 				8FBBCE65270FAE7F007F3DEA /* Assets.xcassets */,
 				8FBBCE67270FAE7F007F3DEA /* LaunchScreen.storyboard */,
 				8FBBCE6A270FAE7F007F3DEA /* Info.plist */,
-				8FBBCE62270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld */,
 				8F7BCC5C2714CECC00B6CF19 /* TextFieldNumberValidator.swift */,
 				8FA46A192712B41D00B0CF5F /* fonts */,
 				8F7BCC5E271BAB1300B6CF19 /* LotteryCalculator.swift */,
@@ -276,7 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F3CC4DE272B2BF8002F17E2 /* LuckyNumbersTableViewController.swift in Sources */,
-				8FBBCE64270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld in Sources */,
 				8FBBCE5A270FAE7D007F3DEA /* AppDelegate.swift in Sources */,
 				8F7BCC5D2714CECC00B6CF19 /* TextFieldNumberValidator.swift in Sources */,
 				8FBBCE5C270FAE7D007F3DEA /* SceneDelegate.swift in Sources */,
@@ -569,19 +563,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8FBBCE62270FAE7D007F3DEA /* LottoLuckTester.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8FBBCE63270FAE7D007F3DEA /* LottoLuckTester.xcdatamodel */,
-			);
-			currentVersion = 8FBBCE63270FAE7D007F3DEA /* LottoLuckTester.xcdatamodel */;
-			path = LottoLuckTester.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8FBBCE4E270FAE7D007F3DEA /* Project object */;
 }

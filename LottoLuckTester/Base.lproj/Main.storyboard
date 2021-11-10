@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Press your lottery luck!-->
+        <!--The Forever Lotto-->
         <scene sceneID="vcL-0e-i6k">
             <objects>
                 <viewController id="7t8-qT-2a9" customClass="MainViewController" customModule="LottoLuckTester" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,7 +236,7 @@
                             <constraint firstItem="F4n-e7-602" firstAttribute="leading" secondItem="wKO-mE-ORA" secondAttribute="leading" constant="30" id="vmW-Hr-MUY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Press your lottery luck!" id="5GA-OB-zdl"/>
+                    <navigationItem key="navigationItem" title="The Forever Lotto" id="5GA-OB-zdl"/>
                     <connections>
                         <outlet property="lottoNum1" destination="SST-vC-kHR" id="lFt-dY-3nT"/>
                         <outlet property="lottoNum2" destination="THj-CO-ra5" id="IRL-0n-13D"/>
