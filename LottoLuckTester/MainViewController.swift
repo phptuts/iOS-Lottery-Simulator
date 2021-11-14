@@ -76,7 +76,7 @@ class MainViewController: UIViewController {
         
         // This code was copied from stackoverflow
         // link: https://stackoverflow.com/a/44036814
-        let link = NSURL(string: "http://google.com/")
+        let link = NSURL(string: "https://apps.apple.com/us/app/the-forever-lotto/id1594528413")
         // Screenshot:
         UIGraphicsBeginImageContextWithOptions(self.view.frame.size, true, 0.0)
         self.view.drawHierarchy(in: self.view.frame, afterScreenUpdates: false)
@@ -108,27 +108,27 @@ class MainViewController: UIViewController {
         
         clearOutput()
         
-        guard let num1 = Int(lottoNum1.text ?? "1") else {
+        guard let num1 = Int(lottoNum1.text ?? "") else {
             return
         }
-        guard let num2 = Int(lottoNum2.text ?? "1") else {
+        guard let num2 = Int(lottoNum2.text ?? "") else {
             return
         }
-        guard let num3 = Int(lottoNum3.text ?? "1") else {
+        guard let num3 = Int(lottoNum3.text ?? "") else {
             return
         }
-        guard let num4 = Int(lottoNum4.text ?? "1") else {
+        guard let num4 = Int(lottoNum4.text ?? "") else {
             return
         }
-        guard let num5 = Int(lottoNum5.text ?? "1") else {
-            return
-        }
-        
-        guard let powerball = Int(lottoNum6.text ?? "1") else {
+        guard let num5 = Int(lottoNum5.text ?? "") else {
             return
         }
         
-        guard let ticketsPerYear = Int(ticketPerTextField.text ?? "1") else {
+        guard let powerball = Int(lottoNum6.text ?? "") else {
+            return
+        }
+        
+        guard let ticketsPerYear = Int(ticketPerTextField.text ?? "") else {
             return
         }
         
@@ -175,6 +175,17 @@ class MainViewController: UIViewController {
         }
         
     }
+    
+    // https://stackoverflow.com/a/41811798
+    // force the orientation to be in portrait
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       
+       AppUtility.lockOrientation(.portrait)
+       // Or to rotate and lock
+       // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+       
+   }
     
     func clearOutput() {
         totalYearsLabel.text = "Years: "
@@ -241,4 +252,27 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+}
+
+
+// https://stackoverflow.com/a/41811798
+// force the orientation to be in portrait
+struct AppUtility {
+
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+    
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            delegate.orientationLock = orientation
+        }
+    }
+
+    /// OPTIONAL Added method to adjust lock and rotate to the desired orientation
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+   
+        self.lockOrientation(orientation)
+    
+        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+        UINavigationController.attemptRotationToDeviceOrientation()
+    }
+
 }

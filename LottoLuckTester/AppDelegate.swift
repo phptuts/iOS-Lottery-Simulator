@@ -12,7 +12,16 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    // https://stackoverflow.com/a/41811798
+    // force the orientation to be in portrait
+    var orientationLock = UIInterfaceOrientationMask.all
 
+    // https://stackoverflow.com/a/41811798
+    // force the orientation to be in portrait
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+            return self.orientationLock
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

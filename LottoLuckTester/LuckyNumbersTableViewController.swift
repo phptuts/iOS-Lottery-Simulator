@@ -20,6 +20,14 @@ class LuckyNumbersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    override open var shouldAutorotate: Bool {
+        return false
+    }
 
     // MARK: - Table view data source
 
