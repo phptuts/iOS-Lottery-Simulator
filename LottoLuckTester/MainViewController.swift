@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
         refreshButton.setTitle("", for: .normal)
         randomNumbers()
         changeButton(playButton, "Play", color: .orange)
-        changeButton(self.winningNumberBtn, "Lucky Numbers", color: .systemGreen, 20)
+        changeButton(self.winningNumberBtn, "Wins", color: .systemGreen, 20)
         changeButton(self.shareBtn, "Share", color: .systemPink, 20)
     }
 
