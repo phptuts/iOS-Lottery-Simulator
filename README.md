@@ -4,7 +4,8 @@ This is an app that lets you simulate playing the lottery up to a million years.
 
 ## Promo Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2Th-rFvACgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![app video](https://img.youtube.com/vi/2Th-rFvACgE/0.jpg)](https://www.youtube.com/watch?v=2Th-rFvACgE)
+
 
 ## Screenshots
 
